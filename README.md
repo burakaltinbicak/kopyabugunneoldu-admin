@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bugün Ne Oldu? - Admin Paneli
 
-## Getting Started
+Bu depo, **Bugün Ne Oldu?** sisteminin yönetim arayüzüdür. Sistem yöneticilerinin içerikleri kontrol etmesi, eklemesi veya düzenlemesi için oluşturulmuş güvenli bir kontrol panelidir.
 
-First, run the development server:
+## 🔗 Proje Ekosistemi
 
+Bu proje, üç parçalı mimarinin yönetim merkezidir. Ekosistemin diğer repolarına aşağıdan ulaşabilirsiniz:
+
+* **Frontend:** [kopyabugunneoldu](https://github.com/burakaltinbicak/kopyabugunneoldu)
+* **API / Backend:** [kopyabugunneoldu-api](https://github.com/burakaltinbicak/kopyabugunneoldu-api)
+* **Admin Paneli (Şu an buradasınız):** [kopyabugunneoldu-admin](https://github.com/burakaltinbicak/kopyabugunneoldu-admin)
+
+## 💻 Kullanılan Teknolojiler
+
+* **Framework:** Next.js (v16.2.1)
+* **Kütüphane:** React (v19.2.4)
+* **Dil:** TypeScript
+* **Stilleme:** Tailwind CSS (v4)
+* **HTTP İstemcisi:** Axios
+
+## 🚀 Kurulum ve Çalıştırma
+
+**1. Repoyu Klonlayın**
 ```bash
+git clone [https://github.com/burakaltinbicak/kopyabugunneoldu-admin.git](https://github.com/burakaltinbicak/kopyabugunneoldu-admin.git)
+cd kopyabugunneoldu-admin
+2. Bağımlılıkları Yükleyin
+
+Bash
+npm install
+3. Çevresel Değişkenleri Ayarlayın
+Projenin ana dizininde bulunan .env.example dosyasını kopyalayarak bir .env dosyası oluşturun ve admin giriş bilgilerinizi tanımlayın:
+
+Kod snippet'i
+NEXT_PUBLIC_ADMIN_USERNAME=sizin_belirleyeceginiz_kullanici_adi
+NEXT_PUBLIC_ADMIN_PASSWORD=sizin_belirleyeceginiz_sifre
+4. Geliştirme Sunucusunu Başlatın
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Tarayıcınızda http://localhost:3000 (veya port çakışması varsa terminalde belirtilen port) adresine giderek yönetim panelini görüntüleyebilirsiniz.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🛠️ Kullanılabilir Komutlar
+npm run dev: Geliştirme sunucusunu başlatır.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm run build: Projeyi prodüksiyon için derler.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+npm run start: Derlenmiş projeyi başlatır.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm run lint: ESLint ile kod denetimi yapar.
